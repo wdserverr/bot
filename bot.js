@@ -30,7 +30,7 @@ const myAccount = async (privateKey) => {
 }
 
 const checkBalance = async (address) => {
-    let res = await axios.get(`https://api-testnet.bscscan.com/api?module=account&action=balance&address=${address}&tag=latest&apikey=${process.env.API_KEY}`);
+    let res = await axios.get(`https://api.bscscan.com/api?module=account&action=balance&address=${address}&tag=latest&apikey=${process.env.API_KEY}`);
     let balance = web3.utils.fromWei(res.data.result, 'ether');
 
     // console.log(chalk.cyan('= = = = = = = = = = = = = = = = = = = = = = = = = = ='));
